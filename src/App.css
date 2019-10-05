@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+/********************/
+body {
+    margin: 10px;
+    font-size: 500%;
+    background-color: lightgray;
+}
+.tile {
+    position: relative;
+    border: 2px solid #000040;
+    width: 2em;
+    height: 2em;
+    /* line-height: .9em; */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tile-unknown {
+    background: rgb(0,212,255);
+    background: linear-gradient(120deg, rgba(0,212,255,1) 0%, rgba(3,147,221,1) 47%, rgba(0,129,196,1) 100%);
+}
+
+.tile-unknown .mine {
+    display: none;
+}
+
+.mine {
+    display: block;
+    /* position: absolute; */
+}
+
+.mine:after {
+	content: attr(data-mines);
+    font-weight: bold;
+    display: inline-block;
+    font-size: 2em;
+    line-height: .9em;
+}
+
+[data-mines="0"] {
+  display: none;
+}
+[data-mines="1"] {
+  color: blue;
+}
+[data-mines="2"] {
+  color: green;
+}
+[data-mines="3"] {
+  color: red;
+}
+[data-mines="4"] {
+  color: navy;
+}
+[data-mines="5"] {
+  color: maroon;
+}
